@@ -34,7 +34,13 @@ class CameraUsageController {
     }
     func sendUpdateToServer() {
         UserDefaults.standard.synchronize()
-        if let url = UserDefaults.standard.url(forKey: "updateURL") {
+        var urlKey = "cameraOffURL"
+        if self.lastCameraState {
+            urlKey = "cameraOnURL"
+        }
+        if let url = UserDefaults.standard.url(forKey: urlKey) {
+            
+            
             URLSession.shared.dataTask(with: url) { (data, response, error) in
                 print("done updating")
             }.resume()

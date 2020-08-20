@@ -18,7 +18,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var window: NSWindow!
     let cameraUsageController = CameraUsageController()
 
-    @IBOutlet weak var updateURLField: NSTextField!
+    @IBOutlet weak var cameraOnURLField: NSTextField!
+    @IBOutlet weak var cameraOffURLField: NSTextField!
+    
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
@@ -35,16 +37,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBAction func showPreferencesWindow(_ sender: Any) {
         self.window.setIsVisible(true)
         self.window.makeKey()
-        if let updateURLString = UserDefaults.standard.url(forKey: "updateURL")?.absoluteString {
-            self.updateURLField.stringValue = updateURLString
+        UserDefaults.standard.synchronize()
+
+        if let cameraOnURLString = UserDefaults.standard.url(forKey: "cameraOnURL")?.absoluteString {
+            self.cameraOnURLField.stringValue = cameraOnURLString
+        }
+        if let cameraOffURLString = UserDefaults.standard.url(forKey: "cameraOffURL")?.absoluteString {
+            self.cameraOffURLField.stringValue = cameraOffURLString
         }
     }
     
-    @IBAction func saveUpdateURL(_ sender: Any) {
-        if let url = URL(string: self.updateURLField.stringValue) {
-            UserDefaults.standard.set(url, forKey: "updateURL")
-            UserDefaults.standard.synchronize()
+    @IBAction func saveUpdateURLs(_ sender: Any) {
+        if let cameraOnURL = URL(string: self.cameraOnURLField.stringValue) {
+            UserDefaults.standard.set(cameraOnURL, forKey: "cameraOnURL")
         }
+        if let cameraOffURL = URL(string: self.cameraOffURLField.stringValue) {
+            UserDefaults.standard.set(cameraOffURL, forKey: "cameraOffURL")
+        }
+        UserDefaults.standard.synchronize()
     }
 }
 
