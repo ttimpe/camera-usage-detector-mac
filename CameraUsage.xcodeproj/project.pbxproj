@@ -3,13 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		71F5017F24EE7C6600DDD11E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F5017E24EE7C6600DDD11E /* AppDelegate.swift */; };
 		71F5018124EE7C6800DDD11E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71F5018024EE7C6800DDD11E /* Assets.xcassets */; };
 		71F5018424EE7C6800DDD11E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71F5018224EE7C6800DDD11E /* MainMenu.xib */; };
+		71F5019024EE823E00DDD11E /* IsCameraOn in Frameworks */ = {isa = PBXBuildFile; productRef = 71F5018F24EE823E00DDD11E /* IsCameraOn */; };
+		71F5019224EE825900DDD11E /* CameraUsageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F5019124EE825900DDD11E /* CameraUsageController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,7 @@
 		71F5018324EE7C6800DDD11E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		71F5018524EE7C6800DDD11E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71F5018624EE7C6800DDD11E /* CameraUsage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CameraUsage.entitlements; sourceTree = "<group>"; };
+		71F5019124EE825900DDD11E /* CameraUsageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraUsageController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71F5019024EE823E00DDD11E /* IsCameraOn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +60,7 @@
 				71F5018224EE7C6800DDD11E /* MainMenu.xib */,
 				71F5018524EE7C6800DDD11E /* Info.plist */,
 				71F5018624EE7C6800DDD11E /* CameraUsage.entitlements */,
+				71F5019124EE825900DDD11E /* CameraUsageController.swift */,
 			);
 			path = CameraUsage;
 			sourceTree = "<group>";
@@ -76,6 +81,9 @@
 			dependencies = (
 			);
 			name = CameraUsage;
+			packageProductDependencies = (
+				71F5018F24EE823E00DDD11E /* IsCameraOn */,
+			);
 			productName = CameraUsage;
 			productReference = 71F5017B24EE7C6600DDD11E /* CameraUsage.app */;
 			productType = "com.apple.product-type.application";
@@ -104,6 +112,9 @@
 				Base,
 			);
 			mainGroup = 71F5017224EE7C6600DDD11E;
+			packageReferences = (
+				71F5018E24EE823E00DDD11E /* XCRemoteSwiftPackageReference "is-camera-on" */,
+			);
 			productRefGroup = 71F5017C24EE7C6600DDD11E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -130,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71F5019224EE825900DDD11E /* CameraUsageController.swift in Sources */,
 				71F5017F24EE7C6600DDD11E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,6 +335,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		71F5018E24EE823E00DDD11E /* XCRemoteSwiftPackageReference "is-camera-on" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/is-camera-on";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		71F5018F24EE823E00DDD11E /* IsCameraOn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 71F5018E24EE823E00DDD11E /* XCRemoteSwiftPackageReference "is-camera-on" */;
+			productName = IsCameraOn;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 71F5017324EE7C6600DDD11E /* Project object */;
 }
