@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  CameraUsage
+
+  Created by Tobias Timpe on 21.08.20.
+  Copyright © 2020 Tobias Timpe. All rights reserved.
+*/
+"MENU_ITEM_PREFERENCES" = "Einstellungen";
+"MENU_ITEM_QUIT" = "CameraUsage beenden";

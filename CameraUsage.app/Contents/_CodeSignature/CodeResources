@@ -4,19 +4,113 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Resources/AppIcon.icns</key>
+		<data>
+		pSGxlgjO8M2cuuKg51au2X3CU40=
+		</data>
+		<key>Resources/Assets.car</key>
+		<data>
+		yhVR/dJKH5TF4Tqj6SGyLJSZ+Fk=
+		</data>
 		<key>Resources/Base.lproj/MainMenu.nib</key>
 		<data>
-		4tDtLVToSfYr87PtuSD6hnjJE+0=
+		UCunx0zNYd/1VlCXMEd7pIrgcBI=
 		</data>
+		<key>Resources/de.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			9+j6Tmv1hegR6cThZHNTYGCR66Q=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/de.lproj/MainMenu.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Qe2eko1fYJAIg0LSroy25AivDZk=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			8C1QNu4L8VwcoSt5Slqyt95L60o=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/en.lproj/MainMenu.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Me6dJZaQGG1rweq8u9Mvs830ERA=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Resources/AppIcon.icns</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			DKN0teEKA0Xnc5TbZkorGWZ04URZ4ecF6InpgbCWN8w=
+			</data>
+		</dict>
+		<key>Resources/Assets.car</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+qdwhPtqos6Fyy/Aco/Dz1BXUz2/ykSfKRa/DzuXLD4=
+			</data>
+		</dict>
 		<key>Resources/Base.lproj/MainMenu.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IVVeVQEJATcZvH0ip4r0q78+4CWwujz8yijqrN55PzQ=
+			aHrNZTiRZCEkx70HVhdRQ5e6Q5dJhRbPvCWtu58489A=
 			</data>
+		</dict>
+		<key>Resources/de.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LIQX+sZpsNb5lFw8ZgtJX3fmTRDQzr7OL0EZDgBOVSY=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/de.lproj/MainMenu.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ZfFcYk+k6G78a2fUSxaMeWjNp3/9aZP/DlqHm2s4Jvs=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Pautg6WhfXx1AGYpR+3TNJQhIPTjYKCZAx2wOSYLAzw=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/en.lproj/MainMenu.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Of/7011nj/AJOqsvV1lfq5SkuC4S64zi2o2HSq0985I=
+			</data>
+			<key>optional</key>
+			<true/>
 		</dict>
 	</dict>
 	<key>rules</key>

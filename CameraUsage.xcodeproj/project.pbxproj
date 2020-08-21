@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7175733024EFA93C00DFF268 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7175733224EFA93C00DFF268 /* Localizable.strings */; };
 		71F5017F24EE7C6600DDD11E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F5017E24EE7C6600DDD11E /* AppDelegate.swift */; };
 		71F5018124EE7C6800DDD11E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71F5018024EE7C6800DDD11E /* Assets.xcassets */; };
 		71F5018424EE7C6800DDD11E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71F5018224EE7C6800DDD11E /* MainMenu.xib */; };
@@ -15,6 +16,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7175733124EFA93C00DFF268 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7175733724EFAD9100DFF268 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		7175733824EFAE2D00DFF268 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		7175733924EFAE2D00DFF268 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		71F5017B24EE7C6600DDD11E /* CameraUsage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraUsage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71F5017E24EE7C6600DDD11E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71F5018024EE7C6800DDD11E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,6 +66,7 @@
 				71F5018524EE7C6800DDD11E /* Info.plist */,
 				71F5018624EE7C6800DDD11E /* CameraUsage.entitlements */,
 				71F5019124EE825900DDD11E /* CameraUsageController.swift */,
+				7175733224EFA93C00DFF268 /* Localizable.strings */,
 			);
 			path = CameraUsage;
 			sourceTree = "<group>";
@@ -95,7 +101,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Tobias Timpe";
 				TargetAttributes = {
 					71F5017A24EE7C6600DDD11E = {
@@ -110,6 +116,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = 71F5017224EE7C6600DDD11E;
 			packageReferences = (
@@ -130,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71F5018124EE7C6800DDD11E /* Assets.xcassets in Resources */,
+				7175733024EFA93C00DFF268 /* Localizable.strings in Resources */,
 				71F5018424EE7C6800DDD11E /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,10 +157,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		7175733224EFA93C00DFF268 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7175733124EFA93C00DFF268 /* en */,
+				7175733924EFAE2D00DFF268 /* de */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		71F5018224EE7C6800DDD11E /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				71F5018324EE7C6800DDD11E /* Base */,
+				7175733724EFAD9100DFF268 /* en */,
+				7175733824EFAE2D00DFF268 /* de */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -164,6 +183,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -186,6 +206,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -224,6 +245,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -246,6 +268,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -278,6 +301,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CameraUsage/CameraUsage.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 252MRF6HHT;
@@ -299,6 +323,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CameraUsage/CameraUsage.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 252MRF6HHT;

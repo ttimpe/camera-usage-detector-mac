@@ -1,0 +1,36 @@
+
+/* Class = "NSMenuItem"; title = "CameraUsage"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "CameraUsage";
+
+/* Class = "NSMenuItem"; title = "Quit CameraUsage"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "CameraUsage beenden";
+
+/* Class = "NSMenuItem"; title = "About CameraUsage"; ObjectID = "5kV-Vb-QxS"; */
+"5kV-Vb-QxS.title" = "Über CameraUsage";
+
+/* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
+"AYu-sK-qS6.title" = "Main Menu";
+
+/* Class = "NSMenuItem"; title = "Preferences…"; ObjectID = "BOF-NM-1cW"; */
+"BOF-NM-1cW.title" = "Einstellungen…";
+
+/* Class = "NSTextFieldCell"; title = "LABEL_CAMERA_ON_URL"; ObjectID = "EU0-OB-n6G"; */
+"EU0-OB-n6G.title" = "Webcam-An URL:";
+
+/* Class = "NSButtonCell"; title = "SAVE"; ObjectID = "JOR-W8-Gpp"; */
+"JOR-W8-Gpp.title" = "Sichern";
+
+
+/* Class = "NSWindow"; title = "CameraUsage"; ObjectID = "QvC-M9-y7g"; */
+"QvC-M9-y7g.title" = "CameraUsage";
+
+/* Class = "NSTextFieldCell"; title = "WINDOW_PREFERENCES_DESCRIPTION"; ObjectID = "RMl-dv-U66"; */
+"RMl-dv-U66.title" = "Diese App ermöglicht es dir, bei der Aktivierung deiner Webcam eine HTTP(s)-URL aufzurufen.";
+
+
+
+/* Class = "NSTextFieldCell"; title = "LABEL_CAMERA_OFF_URL"; ObjectID = "dXs-wZ-Wrv"; */
+"dXs-wZ-Wrv.title" = "Webcam-Aus-URL:";
+
+/* Class = "NSMenu"; title = "CameraUsage"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "CameraUsage";
