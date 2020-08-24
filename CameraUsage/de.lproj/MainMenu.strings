@@ -30,7 +30,7 @@
 
 
 /* Class = "NSTextFieldCell"; title = "LABEL_CAMERA_OFF_URL"; ObjectID = "dXs-wZ-Wrv"; */
-"dXs-wZ-Wrv.title" = "Webcam-Aus-URL:";
+"dXs-wZ-Wrv.title" = "Webcam-Aus URL:";
 
 /* Class = "NSMenu"; title = "CameraUsage"; ObjectID = "uQy-DD-JDr"; */
 "uQy-DD-JDr.title" = "CameraUsage";
