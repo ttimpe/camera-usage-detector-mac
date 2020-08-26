@@ -21,6 +21,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var cameraOnURLField: NSTextField!
     @IBOutlet weak var cameraOffURLField: NSTextField!
     
+    @IBOutlet weak var cameraSelectorPopup: NSPopUpButton!
+    
+    var selectedCameraId :UInt32 = 0
+    
     let statusBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -41,6 +45,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menu.addItem(quitMenuItem)
         self.statusBarItem.menu = menu
         
+        UserDefaults.standard.synchronize()
+        
+        self.selectedCameraId = UInt32(UserDefaults.standard.integer(forKey: "selectedCameraId"))
         
         cameraUsageController.startUpdating()
         
@@ -61,6 +68,26 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         self.window.setIsVisible(true)
         self.window.makeKey()
         UserDefaults.standard.synchronize()
+        
+        
+        
+        let availableCameras = cameraUsageController.cameras
+
+        self.cameraSelectorPopup.removeAllItems()
+
+        let anyCameraMenuItem = NSMenuItem(title: NSLocalizedString("ANY_CAMERA", comment: "Any camera"), action: nil, keyEquivalent: "")
+        anyCameraMenuItem.tag = 0
+        self.cameraSelectorPopup.menu?.addItem(anyCameraMenuItem)
+        
+        
+        for camera in availableCameras {
+            let cameraMenuItem = NSMenuItem(title: camera.name ?? "", action: nil, keyEquivalent: "")
+            cameraMenuItem.tag = Int(camera.id)
+            print(camera.id)
+            self.cameraSelectorPopup.menu?.addItem(cameraMenuItem)
+        }
+        self.cameraSelectorPopup.selectItem(withTag: Int(self.selectedCameraId))
+        
 
         if let cameraOnURLString = UserDefaults.standard.url(forKey: "cameraOnURL")?.absoluteString {
             self.cameraOnURLField.stringValue = cameraOnURLString
@@ -71,6 +98,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @IBAction func saveUpdateURLs(_ sender: Any) {
+        self.selectedCameraId = UInt32(self.cameraSelectorPopup.selectedTag())
+        
+        UserDefaults.standard.set(self.selectedCameraId, forKey: "selectedCameraId")
+        print("saving selected camera id \(self.selectedCameraId)")
+        
+        
         if let cameraOnURL = URL(string: self.cameraOnURLField.stringValue) {
             UserDefaults.standard.set(cameraOnURL, forKey: "cameraOnURL")
         }

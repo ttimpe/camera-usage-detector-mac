@@ -7,13 +7,72 @@
 //
 
 import Foundation
-import IsCameraOn
+import CoreMediaIO
+
 
 class CameraUsageController {
     var timer: Timer?
     var lastCameraState: Bool = false
     
     
+    
+    var cameras: [Camera]  {
+        get {
+            var innerArray :[Camera] = []
+            var opa = CMIOObjectPropertyAddress(
+                mSelector: CMIOObjectPropertySelector(kCMIOHardwarePropertyDevices),
+                mScope: CMIOObjectPropertyScope(kCMIOObjectPropertyScopeGlobal),
+                mElement: CMIOObjectPropertyElement(kCMIOObjectPropertyElementMaster)
+            )
+
+            var dataSize: UInt32 = 0
+            var dataUsed: UInt32 = 0
+            var result = CMIOObjectGetPropertyDataSize(CMIOObjectID(kCMIOObjectSystemObject), &opa, 0, nil, &dataSize)
+            var devices: UnsafeMutableRawPointer?
+
+            repeat {
+                if devices != nil {
+                    free(devices)
+                    devices = nil
+                }
+
+                devices = malloc(Int(dataSize))
+                result = CMIOObjectGetPropertyData(CMIOObjectID(kCMIOObjectSystemObject), &opa, 0, nil, dataSize, &dataUsed, devices)
+            } while result == OSStatus(kCMIOHardwareBadPropertySizeError)
+
+
+            if let devices = devices {
+                for offset in stride(from: 0, to: dataSize, by: MemoryLayout<CMIOObjectID>.size) {
+                    let current = devices.advanced(by: Int(offset)).assumingMemoryBound(to: CMIOObjectID.self)
+                    innerArray.append(Camera(id: current.pointee))
+                }
+            }
+
+            free(devices)
+
+
+            return innerArray
+        }
+        
+    }
+    
+    func isAnyCameraOn() -> Bool {
+        for camera in self.cameras {
+            if camera.isOn {
+                return true
+            }
+        }
+        return false
+    }
+    
+    func getCameraById(id: UInt32) -> Camera? {
+        for camera in self.cameras {
+            if camera.id == id {
+                return camera
+            }
+        }
+        return nil
+    }
 
     
     func startUpdating() {
@@ -25,12 +84,31 @@ class CameraUsageController {
     }
     
     @objc func check() {
-        if (self.lastCameraState != isCameraOn()) {
-            // Got update
-            self.lastCameraState = isCameraOn()
-            print("State changed")
-            self.sendUpdateToServer()
+        let id: Int = UserDefaults.standard.integer(forKey: "selectedCameraId")
+        
+        if id == 0 {
+            // any camera
+            if (self.lastCameraState != isAnyCameraOn()) {
+                   // Got update
+                   self.lastCameraState = isAnyCameraOn()
+                   print("State changed")
+                   self.sendUpdateToServer()
+               }
+        } else {
+            // single camera
+            if let camera = getCameraById(id: UInt32(id)) {
+            
+            if (self.lastCameraState != camera.isOn) {
+                   // Got update
+                self.lastCameraState = camera.isOn
+                   print("State changed")
+                   self.sendUpdateToServer()
+            }
+            }
         }
+        
+        
+   
     }
     func sendUpdateToServer() {
         UserDefaults.standard.synchronize()
@@ -47,5 +125,6 @@ class CameraUsageController {
         }
 
     }
+
     
 }

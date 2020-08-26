@@ -3,19 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		712C527724F67E4D00E7090B /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712C527624F67E4D00E7090B /* Camera.swift */; };
 		7175733024EFA93C00DFF268 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7175733224EFA93C00DFF268 /* Localizable.strings */; };
 		71F5017F24EE7C6600DDD11E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F5017E24EE7C6600DDD11E /* AppDelegate.swift */; };
 		71F5018124EE7C6800DDD11E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71F5018024EE7C6800DDD11E /* Assets.xcassets */; };
 		71F5018424EE7C6800DDD11E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71F5018224EE7C6800DDD11E /* MainMenu.xib */; };
-		71F5019024EE823E00DDD11E /* IsCameraOn in Frameworks */ = {isa = PBXBuildFile; productRef = 71F5018F24EE823E00DDD11E /* IsCameraOn */; };
 		71F5019224EE825900DDD11E /* CameraUsageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F5019124EE825900DDD11E /* CameraUsageController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		712C527624F67E4D00E7090B /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		7175733124EFA93C00DFF268 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7175733724EFAD9100DFF268 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		7175733824EFAE2D00DFF268 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/MainMenu.strings; sourceTree = "<group>"; };
@@ -34,7 +35,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71F5019024EE823E00DDD11E /* IsCameraOn in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +67,7 @@
 				71F5018624EE7C6800DDD11E /* CameraUsage.entitlements */,
 				71F5019124EE825900DDD11E /* CameraUsageController.swift */,
 				7175733224EFA93C00DFF268 /* Localizable.strings */,
+				712C527624F67E4D00E7090B /* Camera.swift */,
 			);
 			path = CameraUsage;
 			sourceTree = "<group>";
@@ -88,7 +89,6 @@
 			);
 			name = CameraUsage;
 			packageProductDependencies = (
-				71F5018F24EE823E00DDD11E /* IsCameraOn */,
 			);
 			productName = CameraUsage;
 			productReference = 71F5017B24EE7C6600DDD11E /* CameraUsage.app */;
@@ -120,7 +120,6 @@
 			);
 			mainGroup = 71F5017224EE7C6600DDD11E;
 			packageReferences = (
-				71F5018E24EE823E00DDD11E /* XCRemoteSwiftPackageReference "is-camera-on" */,
 			);
 			productRefGroup = 71F5017C24EE7C6600DDD11E /* Products */;
 			projectDirPath = "";
@@ -149,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				712C527724F67E4D00E7090B /* Camera.swift in Sources */,
 				71F5019224EE825900DDD11E /* CameraUsageController.swift in Sources */,
 				71F5017F24EE7C6600DDD11E /* AppDelegate.swift in Sources */,
 			);
@@ -364,25 +364,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		71F5018E24EE823E00DDD11E /* XCRemoteSwiftPackageReference "is-camera-on" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sindresorhus/is-camera-on";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		71F5018F24EE823E00DDD11E /* IsCameraOn */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 71F5018E24EE823E00DDD11E /* XCRemoteSwiftPackageReference "is-camera-on" */;
-			productName = IsCameraOn;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 71F5017324EE7C6600DDD11E /* Project object */;
 }
