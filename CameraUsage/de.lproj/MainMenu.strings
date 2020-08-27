@@ -27,10 +27,10 @@
 /* Class = "NSTextFieldCell"; title = "WINDOW_PREFERENCES_DESCRIPTION"; ObjectID = "RMl-dv-U66"; */
 "RMl-dv-U66.title" = "Diese App ermöglicht es dir, bei der Aktivierung deiner Webcam eine HTTP(s)-URL aufzurufen.";
 
-
-
 /* Class = "NSTextFieldCell"; title = "LABEL_CAMERA_OFF_URL"; ObjectID = "dXs-wZ-Wrv"; */
 "dXs-wZ-Wrv.title" = "Webcam-Aus URL:";
 
 /* Class = "NSMenu"; title = "CameraUsage"; ObjectID = "uQy-DD-JDr"; */
 "uQy-DD-JDr.title" = "CameraUsage";
+/* Class = "NSTextFieldCell"; title = "SELECT_CAMERA"; ObjectID = "epq-7H-3io"; */
+"YLS-hI-VGI.title" = "Aktive Webcam:";

@@ -33,3 +33,6 @@
 
 /* Class = "NSMenu"; title = "CameraUsage"; ObjectID = "uQy-DD-JDr"; */
 "uQy-DD-JDr.title" = "CameraUsage";
+
+/* Class = "NSTextFieldCell"; title = "SELECT_CAMERA"; ObjectID = "epq-7H-3io"; */
+"YLS-hI-VGI.title" = "Active camera:";
