@@ -48,7 +48,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         UserDefaults.standard.synchronize()
         
         self.selectedCameraId = UInt32(UserDefaults.standard.integer(forKey: "selectedCameraId"))
-        
+        cameraUsageController.enableDALDevices()
         cameraUsageController.startUpdating()
         
     }

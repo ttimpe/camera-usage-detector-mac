@@ -8,7 +8,7 @@
 
 import Foundation
 import CoreMediaIO
-
+import AVFoundation
 
 class CameraUsageController {
     var timer: Timer?
@@ -75,6 +75,10 @@ class CameraUsageController {
     }
 
     
+    @objc func didStartCapture () {
+        print("DID START CAPTURE")
+    }
+    
     func startUpdating() {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(check), userInfo: nil, repeats: true)
         timer?.tolerance = 0.2
@@ -82,6 +86,19 @@ class CameraUsageController {
     func stopUpdating() {
         timer?.invalidate()
     }
+    
+    func enableDALDevices() {
+        
+        var prop = CMIOObjectPropertyAddress(mSelector: CMIOObjectPropertySelector(kCMIOHardwarePropertyAllowScreenCaptureDevices), mScope: CMIOObjectPropertyScope(kCMIOObjectPropertyScopeGlobal), mElement: CMIOObjectPropertyElement(kCMIOObjectPropertyElementMaster))
+        
+        
+        var allow: UInt32 = 1
+        
+        CMIOObjectSetPropertyData(CMIOObjectID(kCMIOObjectSystemObject), &prop, 0, nil,UInt32(MemoryLayout<UInt32>.size), &allow)
+        print("Enabled DAL devices")
+        
+    }
+    
     
     @objc func check() {
         let id: Int = UserDefaults.standard.integer(forKey: "selectedCameraId")

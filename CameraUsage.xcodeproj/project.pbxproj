@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7100A65A24F8E90F00A7CF05 /* CameraUsageRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CameraUsageRelease.entitlements; sourceTree = "<group>"; };
 		712C527624F67E4D00E7090B /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		7175733124EFA93C00DFF268 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7175733924EFAE2D00DFF268 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -60,14 +61,15 @@
 		71F5017D24EE7C6600DDD11E /* CameraUsage */ = {
 			isa = PBXGroup;
 			children = (
+				7100A65A24F8E90F00A7CF05 /* CameraUsageRelease.entitlements */,
+				71F5018624EE7C6800DDD11E /* CameraUsage.entitlements */,
 				71F5017E24EE7C6600DDD11E /* AppDelegate.swift */,
 				71F5018024EE7C6800DDD11E /* Assets.xcassets */,
 				71F5018224EE7C6800DDD11E /* MainMenu.xib */,
 				71F5018524EE7C6800DDD11E /* Info.plist */,
-				71F5018624EE7C6800DDD11E /* CameraUsage.entitlements */,
 				71F5019124EE825900DDD11E /* CameraUsageController.swift */,
-				7175733224EFA93C00DFF268 /* Localizable.strings */,
 				712C527624F67E4D00E7090B /* Camera.swift */,
+				7175733224EFA93C00DFF268 /* Localizable.strings */,
 			);
 			path = CameraUsage;
 			sourceTree = "<group>";
@@ -215,6 +217,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -277,6 +280,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -323,7 +327,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = CameraUsage/CameraUsage.entitlements;
+				CODE_SIGN_ENTITLEMENTS = CameraUsage/CameraUsageRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
