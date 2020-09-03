@@ -66,7 +66,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         print(self.window.debugDescription)
         
         self.window.setIsVisible(true)
-        self.window.makeKey()
+        NSApp.activate(ignoringOtherApps: true)
+
+        
+        self.window.makeKeyAndOrderFront(self)
+        
+
+        
         UserDefaults.standard.synchronize()
         
         

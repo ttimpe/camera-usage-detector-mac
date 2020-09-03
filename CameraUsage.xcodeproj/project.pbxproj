@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		712C527724F67E4D00E7090B /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712C527624F67E4D00E7090B /* Camera.swift */; };
 		7175733024EFA93C00DFF268 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7175733224EFA93C00DFF268 /* Localizable.strings */; };
+		71DE2AD62500CD1A00160D58 /* EditingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DE2AD52500CD1A00160D58 /* EditingTextField.swift */; };
 		71F5017F24EE7C6600DDD11E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F5017E24EE7C6600DDD11E /* AppDelegate.swift */; };
 		71F5018124EE7C6800DDD11E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71F5018024EE7C6800DDD11E /* Assets.xcassets */; };
 		71F5018424EE7C6800DDD11E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71F5018224EE7C6800DDD11E /* MainMenu.xib */; };
@@ -22,6 +23,7 @@
 		7175733924EFAE2D00DFF268 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7185BCBD24F7952B0017CD10 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/MainMenu.strings; sourceTree = "<group>"; };
 		7185BCBF24F7952E0017CD10 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/MainMenu.strings; sourceTree = "<group>"; };
+		71DE2AD52500CD1A00160D58 /* EditingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditingTextField.swift; sourceTree = "<group>"; };
 		71F5017B24EE7C6600DDD11E /* CameraUsage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CameraUsage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71F5017E24EE7C6600DDD11E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71F5018024EE7C6800DDD11E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				71F5019124EE825900DDD11E /* CameraUsageController.swift */,
 				712C527624F67E4D00E7090B /* Camera.swift */,
 				7175733224EFA93C00DFF268 /* Localizable.strings */,
+				71DE2AD52500CD1A00160D58 /* EditingTextField.swift */,
 			);
 			path = CameraUsage;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			files = (
 				712C527724F67E4D00E7090B /* Camera.swift in Sources */,
 				71F5019224EE825900DDD11E /* CameraUsageController.swift in Sources */,
+				71DE2AD62500CD1A00160D58 /* EditingTextField.swift in Sources */,
 				71F5017F24EE7C6600DDD11E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,7 +312,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 252MRF6HHT;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = CameraUsage/Info.plist;
@@ -316,7 +320,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tobisoft.CameraUsage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -331,7 +335,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 252MRF6HHT;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = CameraUsage/Info.plist;
@@ -339,7 +343,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tobisoft.CameraUsage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
