@@ -8,3 +8,6 @@
 "MENU_ITEM_PREFERENCES" = "Einstellungen…";
 "MENU_ITEM_QUIT" = "CameraUsage beenden";
 "ANY_CAMERA" = "Beliebige Webcam";
+"RESUME_MONITORING" = "􀊕 Monitoring fortsetzen";
+"PAUSE_MONITORING" = "􀊗 Monitoring pausieren";
+

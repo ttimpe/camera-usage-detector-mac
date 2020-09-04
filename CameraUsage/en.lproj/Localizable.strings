@@ -8,3 +8,5 @@
 "MENU_ITEM_PREFERENCES" = "Preferences…";
 "MENU_ITEM_QUIT" = "Quit CameraUsage";
 "ANY_CAMERA" = "Any camera";
+"RESUME_MONITORING" = "􀊕 Resume monitoring";
+"PAUSE_MONITORING" = "􀊗 Pause monitoring";

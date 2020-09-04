@@ -13,7 +13,7 @@ import AVFoundation
 class CameraUsageController {
     var timer: Timer?
     var lastCameraState: Bool = false
-    
+    var isMonitoring: Bool = false
     
     
     var cameras: [Camera]  {
@@ -82,9 +82,11 @@ class CameraUsageController {
     func startUpdating() {
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(check), userInfo: nil, repeats: true)
         timer?.tolerance = 0.2
+        self.isMonitoring = true
     }
     func stopUpdating() {
         timer?.invalidate()
+        self.isMonitoring = false
     }
     
     func enableDALDevices() {

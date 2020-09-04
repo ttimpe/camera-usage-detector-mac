@@ -37,10 +37,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         let menu = NSMenu()
         
+        let playPauseMenuItem = NSMenuItem(title: NSLocalizedString("PAUSE_MONITORING", comment: "Pause monitoring"), action: #selector(self.toggleMonitoringEnabled(_:)), keyEquivalent: "")
+        
         let preferencesMenuItem = NSMenuItem(title: NSLocalizedString("MENU_ITEM_PREFERENCES", comment: "Preferences"), action: #selector(self.showPreferencesWindow(_:)), keyEquivalent: "")
         
         let quitMenuItem = NSMenuItem(title: NSLocalizedString("MENU_ITEM_QUIT", comment: "Quit"), action: #selector(self.quitApp), keyEquivalent: "")
         
+        
+        menu.addItem(playPauseMenuItem)
         menu.addItem(preferencesMenuItem)
         menu.addItem(quitMenuItem)
         self.statusBarItem.menu = menu
@@ -60,6 +64,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @objc func quitApp() {
         NSApp.terminate(nil)
+    }
+    
+    @objc func toggleMonitoringEnabled(_ sender: NSMenuItem) {
+        if self.cameraUsageController.isMonitoring {
+            self.cameraUsageController.stopUpdating()
+            sender.title = NSLocalizedString("RESUME_MONITORING", comment: "Resume monitoring")
+        } else {
+            self.cameraUsageController.startUpdating()
+            sender.title = NSLocalizedString("PAUSE_MONITORING", comment: "Pause monitoring")
+        }
     }
 
     @IBAction func showPreferencesWindow(_ sender: Any) {
