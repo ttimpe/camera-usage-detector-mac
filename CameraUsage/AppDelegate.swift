@@ -32,12 +32,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
        
 
         
-        statusBarItem.button?.title = "􀎼"
+        statusBarItem.button?.image = NSImage(named: "MenuBarIcon")
         
-
         let menu = NSMenu()
         
         let playPauseMenuItem = NSMenuItem(title: NSLocalizedString("PAUSE_MONITORING", comment: "Pause monitoring"), action: #selector(self.toggleMonitoringEnabled(_:)), keyEquivalent: "")
+        playPauseMenuItem.state = .on
         
         let preferencesMenuItem = NSMenuItem(title: NSLocalizedString("MENU_ITEM_PREFERENCES", comment: "Preferences"), action: #selector(self.showPreferencesWindow(_:)), keyEquivalent: "")
         
@@ -69,10 +69,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc func toggleMonitoringEnabled(_ sender: NSMenuItem) {
         if self.cameraUsageController.isMonitoring {
             self.cameraUsageController.stopUpdating()
-            sender.title = NSLocalizedString("RESUME_MONITORING", comment: "Resume monitoring")
+            sender.state = .off
         } else {
             self.cameraUsageController.startUpdating()
-            sender.title = NSLocalizedString("PAUSE_MONITORING", comment: "Pause monitoring")
+            sender.state = .on
         }
     }
 
