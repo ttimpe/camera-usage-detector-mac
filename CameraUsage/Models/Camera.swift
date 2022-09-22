@@ -9,7 +9,7 @@
 import Foundation
 import CoreMediaIO
 
-struct Camera {
+struct Camera: Hashable, Identifiable {
     var id: CMIOObjectID
     var name: String? {
         get {

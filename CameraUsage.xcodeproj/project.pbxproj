@@ -14,6 +14,8 @@
 		71F5018124EE7C6800DDD11E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71F5018024EE7C6800DDD11E /* Assets.xcassets */; };
 		71F5018424EE7C6800DDD11E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71F5018224EE7C6800DDD11E /* MainMenu.xib */; };
 		71F5019224EE825900DDD11E /* CameraUsageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F5019124EE825900DDD11E /* CameraUsageController.swift */; };
+		AF79BF8828DCA1EE0055D38B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF79BF8728DCA1EE0055D38B /* ContentView.swift */; };
+		AF79BF8C28DCA3480055D38B /* CameraUsageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF79BF8B28DCA3480055D38B /* CameraUsageApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		71F5018524EE7C6800DDD11E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71F5018624EE7C6800DDD11E /* CameraUsage.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CameraUsage.entitlements; sourceTree = "<group>"; };
 		71F5019124EE825900DDD11E /* CameraUsageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraUsageController.swift; sourceTree = "<group>"; };
+		AF79BF8728DCA1EE0055D38B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AF79BF8B28DCA3480055D38B /* CameraUsageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraUsageApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 		71F5017D24EE7C6600DDD11E /* CameraUsage */ = {
 			isa = PBXGroup;
 			children = (
+				AF79BF8A28DCA2A00055D38B /* Views */,
+				AF79BF8928DCA2950055D38B /* Models */,
 				7100A65A24F8E90F00A7CF05 /* CameraUsageRelease.entitlements */,
 				71F5018624EE7C6800DDD11E /* CameraUsage.entitlements */,
 				71F5017E24EE7C6600DDD11E /* AppDelegate.swift */,
@@ -70,11 +76,27 @@
 				71F5018224EE7C6800DDD11E /* MainMenu.xib */,
 				71F5018524EE7C6800DDD11E /* Info.plist */,
 				71F5019124EE825900DDD11E /* CameraUsageController.swift */,
-				712C527624F67E4D00E7090B /* Camera.swift */,
 				7175733224EFA93C00DFF268 /* Localizable.strings */,
-				71DE2AD52500CD1A00160D58 /* EditingTextField.swift */,
+				AF79BF8B28DCA3480055D38B /* CameraUsageApp.swift */,
 			);
 			path = CameraUsage;
+			sourceTree = "<group>";
+		};
+		AF79BF8928DCA2950055D38B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				712C527624F67E4D00E7090B /* Camera.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AF79BF8A28DCA2A00055D38B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AF79BF8728DCA1EE0055D38B /* ContentView.swift */,
+				71DE2AD52500CD1A00160D58 /* EditingTextField.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,7 +175,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF79BF8C28DCA3480055D38B /* CameraUsageApp.swift in Sources */,
 				712C527724F67E4D00E7090B /* Camera.swift in Sources */,
+				AF79BF8828DCA1EE0055D38B /* ContentView.swift in Sources */,
 				71F5019224EE825900DDD11E /* CameraUsageController.swift in Sources */,
 				71DE2AD62500CD1A00160D58 /* EditingTextField.swift in Sources */,
 				71F5017F24EE7C6600DDD11E /* AppDelegate.swift in Sources */,
@@ -312,15 +336,18 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 252MRF6HHT;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = CameraUsage/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CameraUsage;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tobisoft.CameraUsage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -335,15 +362,18 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 252MRF6HHT;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = CameraUsage/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CameraUsage;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tobisoft.CameraUsage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
